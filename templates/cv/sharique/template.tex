@@ -1,0 +1,218 @@
+%% CV Template: sharique
+%% Recreated in LaTeX from an HTML/CSS resume export (photo header, blue
+%% accent bar, two-column skills/certs grid, highlighted award callout).
+%% See TEMPLATE.md for style rules, font notes, and known pitfalls.
+%%
+%% Compile with: pdflatex -interaction=nonstopmode template.tex
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=1.1cm,bottom=1.1cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{tabularx}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---- Colors (from the source CSS) ----
+\definecolor{accent}{HTML}{185FA5}
+\definecolor{graytext}{HTML}{6B7280}
+\definecolor{darktext}{HTML}{1A1A1A}
+\definecolor{awardbg}{HTML}{E6F1FB}
+\color{darktext}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% Section title: bold, blue, small, thin gray rule below.
+% Type section names already in UPPERCASE in the body (see usage below) -
+% titlesec cannot cleanly auto-uppercase + letter-space the argument, so
+% this is done manually per \section{...} call with \textls[...]{...}.
+\titleformat{\section}
+  {\fontsize{8}{10}\selectfont\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{2pt}{\color{black!15}\titlerule[0.4pt]}]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+\renewcommand{\labelitemi}{\raisebox{0.15em}{\tiny$\bullet$}}
+
+% Compact bullet list - avoids depending on enumitem (not present on every
+% TeX Live install); uses plain LaTeX list-parameter overrides instead.
+\newenvironment{compactitem}{%
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}\setlength{\topsep}{2pt}%
+  \setlength{\parsep}{0pt}\setlength{\partopsep}{0pt}%
+  \setlength{\leftmargin}{12pt}
+}{\end{itemize}}
+
+% ---- Reusable commands ----
+
+% Entry header row: title/name (left, bold) + date range (right, gray)
+\newcommand{\entryrow}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+  {\fontsize{10}{12}\selectfont\bfseries #1} & {\fontsize{8.5}{10}\selectfont\color{graytext}#2}
+  \end{tabularx}\par\vspace{1pt}}
+
+% Entry subline: company/school (blue) - pass "\color{graytext}\textbullet\ Location"
+% as part of #1 to switch to gray mid-line, matching the source design.
+\newcommand{\entrysub}[1]{{\fontsize{9}{11}\selectfont\bfseries\color{accent}#1}\par\vspace{3pt}}
+
+% Highlighted callout box (e.g. "OKR of the Quarter") - light blue background,
+% blue left bar. Built with plain colortbl (no tcolorbox dependency).
+\newcommand{\awardbox}[2]{%
+  \vspace{4pt}\noindent
+  \begin{tabular}{@{}>{\columncolor{accent}}p{2pt}>{\columncolor{awardbg}}p{\dimexpr\linewidth-2pt-3\tabcolsep}@{}}
+   & \begin{minipage}[t]{\dimexpr\linewidth-2pt-3\tabcolsep}
+       \vspace{4pt}{\fontsize{9}{11}\selectfont\bfseries\color{accent}#1}\\[2pt]
+       {\fontsize{8.5}{10}\selectfont #2}\vspace{4pt}
+     \end{minipage}\\
+  \end{tabular}\vspace{4pt}}
+
+\begin{document}
+\thispagestyle{empty}
+
+% ============================================================
+%     HEADER
+% ============================================================
+\noindent
+\begin{minipage}[t]{0.80\linewidth}
+  {\fontsize{22}{24}\selectfont\bfseries [YOUR_NAME]}\par
+  \vspace{2pt}
+  {\fontsize{11}{13}\selectfont\color{accent}[YOUR_HEADLINE]}\par
+  \vspace{4pt}
+  {\fontsize{8.5}{11}\selectfont\color{graytext}%
+   [YOUR_PHONE] \quad [YOUR_EMAIL] \quad [YOUR_LOCATION] \quad
+   \href{[YOUR_LINKEDIN_URL]}{\color{accent}[YOUR_LINKEDIN_DISPLAY]} \quad
+   \href{[YOUR_GITHUB_URL]}{\color{accent}[YOUR_GITHUB_DISPLAY]} \quad
+   [YOUR_WORK_AUTH_NOTE]}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.15\linewidth}
+  \raggedleft
+  \begin{tikzpicture}
+    \clip[rounded corners=1.5pt] (0,0) rectangle (2.1cm,2.1cm);
+    \node[anchor=south west,inner sep=0] at (0,0)
+      {\includegraphics[width=2.1cm,height=2.1cm]{[YOUR_PHOTO]}};
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{6pt}
+\noindent{\color{accent}\rule{\linewidth}{1.2pt}}
+\vspace{10pt}\par
+
+% ============================================================
+%     PROFESSIONAL SUMMARY
+% ============================================================
+\section{\textls[150]{PROFESSIONAL SUMMARY}}
+{\fontsize{9.5}{13}\selectfont [PROFILE_STATEMENT_3_TO_5_SENTENCES_WITH_BOLDED_KEY_METRICS]}
+
+% ============================================================
+%     SKILLS
+% ============================================================
+\section{\textls[150]{SKILLS}}
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_1]}\par
+{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_1]}
+&
+{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_2]}\par
+{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_2]}
+\\[8pt]
+{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_3]}\par
+{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_3]}
+&
+{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_4]}\par
+{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_4]}
+\end{tabularx}
+
+\vspace{8pt}
+{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_FULLWIDTH]}\par
+{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_FULLWIDTH]}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+\section{\textls[150]{PROFESSIONAL EXPERIENCE}}
+
+\entryrow{[JOB_TITLE_1]}{[JOB_START]~--~[JOB_END]}
+\entrysub{[COMPANY_1] \color{graytext}\textbullet\ [LOCATION_1]}
+\begin{compactitem}
+  \item [BULLET_WITH_\textbf{BOLDED_METRIC}]
+  \item [BULLET]
+  \item [BULLET]
+\end{compactitem}
+
+% Optional highlight box - use sparingly, at most one per role
+\awardbox{[AWARD_TITLE]}{[AWARD_TEXT]}
+
+\vspace{8pt}
+\entryrow{[JOB_TITLE_2]}{[JOB_START]~--~[JOB_END]}
+\entrysub{[COMPANY_2] \color{graytext}\textbullet\ [LOCATION_2]}
+\begin{compactitem}
+  \item [BULLET]
+  \item [BULLET]
+\end{compactitem}
+
+% Entry with no company/location line (e.g. "Earlier Experience" roll-up):
+% skip \entrysub and start bullets directly after \entryrow.
+
+% ============================================================
+%     CERTIFICATIONS
+% ============================================================
+\section{\textls[150]{CERTIFICATIONS}}
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+{\fontsize{9}{11}\selectfont \href{[CERT_URL_1]}{\color{darktext}[CERT_NAME_1]}}\par
+{\fontsize{8.5}{10}\selectfont\color{graytext}[CERT_DATE_1]}
+&
+{\fontsize{9}{11}\selectfont [CERT_NAME_2]}\par
+{\fontsize{8.5}{10}\selectfont\color{graytext}[CERT_DATE_2]}
+\end{tabularx}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+\section{\textls[150]{EDUCATION}}
+{\fontsize{10}{12}\selectfont\bfseries [DEGREE_1]}\par
+{\fontsize{9}{11}\selectfont\color{graytext}[SCHOOL_1] \textbullet\ [DATES_1]}
+\begin{compactitem}
+  \item [BULLET]
+\end{compactitem}
+
+\vspace{4pt}
+{\fontsize{10}{12}\selectfont\bfseries [DEGREE_2]}\par
+{\fontsize{9}{11}\selectfont\color{graytext}[SCHOOL_2] \textbullet\ [DATES_2]}
+
+% ============================================================
+%     PROJECTS
+% ============================================================
+\section{\textls[150]{PROJECTS}}
+\entryrow{[PROJECT_NAME]}{[PROJECT_START]~--~[PROJECT_END]}
+\begin{compactitem}
+  \item [BULLET]
+  \item [BULLET]
+\end{compactitem}
+
+% ============================================================
+%     OPEN SOURCE & COMMUNITY
+% ============================================================
+\section{\textls[150]{OPEN SOURCE \& COMMUNITY}}
+\begin{compactitem}
+  \item [BULLET]
+  \item [BULLET]
+\end{compactitem}
+
+% ============================================================
+%     LANGUAGES
+% ============================================================
+\section{\textls[150]{LANGUAGES}}
+{\fontsize{9}{11}\selectfont\bfseries [LANGUAGE_1]}\ {\fontsize{8.5}{10}\selectfont\color{graytext}([LEVEL_1])}\qquad
+{\fontsize{9}{11}\selectfont\bfseries [LANGUAGE_2]}\ {\fontsize{8.5}{10}\selectfont\color{graytext}([LEVEL_2])}\qquad
+{\fontsize{9}{11}\selectfont\bfseries [LANGUAGE_3]}\ {\fontsize{8.5}{10}\selectfont\color{graytext}([LEVEL_3])}
+
+\end{document}

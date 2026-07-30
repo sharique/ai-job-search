@@ -154,6 +154,10 @@ Present the evaluation as:
 - **Weak Fit** (30-44): Probably skip unless strategic reasons
 - **Poor Fit** (<30): Skip
 
+## Calibration from Past Applications
+<!-- Populated by /setup Path A from documents/applications/. No outcome.md exists yet for any tracked application, so no strong/weak-fit calibration signal is available - all four are in_progress. Re-run /setup once outcomes are recorded (via /outcome) to populate this properly. -->
+Applications submitted so far span a notably wide range of role types with no outcome data yet to indicate which direction is landing best: Solution Architect / Assistant Director (EY, consulting), Technical Consultant & Project Manager (NTT Data, consulting), Software Engineer - Golang (Tesla, IC pivot into a new language), and Interim Engineering Manager (Wikimedia Deutschland, people leadership). Worth clarifying with the candidate during search-config setup whether this breadth is intentional (casting wide) or whether one direction (e.g. Solution Architect / consulting vs. Engineering Manager vs. hands-on IC) should be prioritised going forward.
+
 ## Pre-Application: Call the Employer (Best Practice)
 
 Before writing the application, consider whether the candidate should call the contact person listed in the posting. **Only call if there are substantive questions** - never call just to "be remembered."

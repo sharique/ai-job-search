@@ -108,3 +108,8 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated
 - Slightly warmer, more personal tone may be acceptable in some languages
+
+## Patterns Observed in Past Applications
+<!-- Extracted from cover_letter.tex / cover-letter.md files in documents/applications/ during /setup Path A. -->
+- **Standard opening formula** (seen in EY, NTT Data, Tesla): "I am writing to express my interest in the [role] at [company]. With over 20 years of enterprise [software/backend] experience..." - direct, credentials-first opening for corporate/consulting roles.
+- **Proactive, direct gap acknowledgment** (seen in Tesla and NTT Data): rather than glossing over a real gap, name it in its own paragraph and pivot forward - e.g. Tesla: "I do not have production Go experience, and I want to be direct about that," followed by why the existing skill set transfers. NTT Data did the same for German language level (B1, actively completing B2). This is a deliberate, repeated tactic, not an accident - keep using it when a genuine gap exists, rather than the more common instinct to minimise it.

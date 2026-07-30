@@ -1,0 +1,22 @@
+{
+  "name": "xing-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching jobs on Xing.com (German/DACH market) via a headless browser — Xing's search page has no data without JS rendering, and its data API is disallowed by robots.txt for every agent.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "xing-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 60000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "playwright-core": "^1.61.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

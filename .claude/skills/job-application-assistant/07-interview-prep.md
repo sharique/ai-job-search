@@ -39,6 +39,69 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+<!-- Populated by /setup Path A from CV bullets and cross-referenced application materials. Fill in S/T/A/R details before relying on these in an interview. -->
+
+### Building the bbg bitbase group engineering team from scratch
+**Source:** CV / LinkedIn - Solution Architect, bbg bitbase group GmbH
+**What happened:** Hired into a situation with no established Drupal team; built and led a cross-functional team of 5 engineers over ~3 years, defining technical and quality standards.
+**Why it matters:** Team-building, leadership, culture-building, hiring/onboarding questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Bayer global website factory - site synchronisation reliability
+**Source:** CV / LinkedIn - Senior Drupal Developer, Acquia
+**What happened:** Designed and implemented a site synchronisation process between the Drupal distribution and SSP portal, achieving 99.5% reliability across 100+ sites and 300+ environments in a regulated pharma environment.
+**Why it matters:** Technical depth, regulated-environment delivery, reliability/scale questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Takeda unified platform - scaling from a single codebase
+**Source:** CV - Solution Architect, bbg bitbase group GmbH
+**What happened:** Architected a unified digital platform for Takeda enabling standardised deployment of 30+ sites from a single codebase, reducing site launch time from weeks to days.
+**Why it matters:** Architecture-under-scale-growth questions, handling scope expansion cleanly.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Platform rebuild - 5x performance improvement
+**Source:** CV - Solution Architect, bbg bitbase group GmbH
+**What happened:** Led an end-to-end platform rebuild achieving a 5x improvement in application performance through architectural refactoring, infrastructure optimisation, and cloud configuration tuning.
+**Why it matters:** Technical optimisation, performance debugging, "biggest technical challenge" questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### GDPR-compliant data architecture - Mina Sidor (Capgemini)
+**Source:** CV / LinkedIn - Senior Consultant / Tech Lead, Capgemini
+**What happened:** Designed a GDPR-compliant, stateless user-data architecture (API-based retrieval, temporary session storage, guaranteed deletion on logout) for the Mina Sidor platform rebuild.
+**Why it matters:** Compliance/regulatory architecture questions, client-facing technical design.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Mansooba - spec-driven AI-assisted delivery with Claude Code
+**Source:** CV - Independent Project, 2025-ongoing
+**What happened:** Built a production-grade SaaS project management tool, acting as Product Owner authoring architecture specs, ADRs, and task plans, with Claude Code executing implementation as the AI developer.
+**Why it matters:** Modern AI-assisted engineering practice questions, self-directed delivery, "how do you use AI tools" questions (name Claude Code explicitly per CLAUDE.md workflow rule).
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

@@ -4,6 +4,19 @@ framework_version: 1.0.0
 
 # CV Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `sharique`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/sharique/template.tex` — use this as the structural reference instead of the stock moderncv template
+> - **Manifest:** `templates/cv/sharique/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Compile with:** `pdflatex` (not lualatex, as named in the stock guidance below)
+> - **Fonts:** TeX Gyre Heros (system font, standard on TeX Live — no bundled font files, no Path setup needed)
+> - **Page limit:** exactly 2 page(s)
+> - **Output file:** unchanged (`cv/main_<company>.tex`); no class or font files need to be copied into the output directory — everything the template needs is a standard TeX Live package
+<!-- END ACTIVE-TEMPLATE -->
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -115,6 +128,13 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **For [YOUR_SECONDARY_ROLE_TYPE] roles:**
 > [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+
+**For Solution Architect / consulting roles** *[Used for: EY Solution Architect - Digital Transformation]*
+> Solution Architect – Digital Transformation with 20+ years of enterprise software experience, delivering digital transformation programmes for globally recognised organisations including Bayer, Pfizer, Boehringer Ingelheim, Takeda, Royal Mail Group, and Microsoft. Defined solution architecture, built and led cross-functional engineering teams of up to 5 engineers, and delivered end-to-end project lifecycle, from stakeholder workshops and requirements definition through to deployment and operational handover. Hands-on architecture of GDPR-compliant data privacy solutions for regulated environments in the pharmaceutical and healthcare sectors.
+
+**For backend/IC engineering roles where a language-stack gap needs direct acknowledgment** *[Used for: Tesla Software Engineer - Golang]*
+> Senior Software Engineer with 20+ years of experience delivering enterprise-scale software for globally recognised organisations including Bayer, Pfizer, Boehringer Ingelheim, Takeda, Royal Mail Group, and Microsoft. Delivered high-availability backend systems at enterprise scale... Prior backend development experience in C# and ASP.NET, architectural patterns transferable to Go, eager to learn Go and motivated to apply enterprise engineering background in a systems-focused environment.
+> (Note the pattern: state the real primary stack, name the gap plainly, then bridge via transferable architectural patterns rather than overstating direct experience.)
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

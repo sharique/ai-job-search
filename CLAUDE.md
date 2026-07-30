@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Sharique Ahmed Farooqui
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Sharique Ahmed Farooqui, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,73 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+<!-- Full structured profile lives in .claude/skills/job-application-assistant/01-candidate-profile.md - this is a summary. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Sharique Ahmed Farooqui
+- **Location:** Berlin, Germany (open to relocation within the EU and, for the right opportunity, the Arab Gulf region)
+- **Languages:** English (Professional/Fluent), German (B1, B2 course in progress), Hindi (Native), Urdu (Native), Turkish (Elementary)
+- **Status:** EU Blue Card holder, unrestricted work authorisation across the EU
+- **LinkedIn headline:** "Solutions Architect | Cloud & Platform Modernization | Enterprise Software | AWS | 20+ Years Building Scalable Digital Platforms"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Bachelor of Engineering, Computer Science & Engineering** (1998-2004) - Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (Mandsaur Institute of Technology)
+- **Cloud Engineering, Training Programme** (Nov 2025 - May 2026) - Masterschool, Berlin
+  - Topics: AWS (EC2, S3, IAM, VPC, RDS), Terraform, Docker, GitHub Actions CI/CD
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Solution Architect** (Mar 2022 - Jan 2025) - **bbg bitbase group GmbH** (Berlin, Germany)
+  - Built and led a cross-functional engineering team of 5; introduced Pantheon cloud infra and GitLab/Bitbucket CI/CD, cutting deployment effort 70%
+  - Architected unified platform for Takeda enabling standardised deployment of 30+ sites from a single codebase
+  - Led platform rebuild achieving 5x application performance improvement
+- **Senior Drupal Developer** (Oct 2018 - Feb 2022) - **Acquia Inc.** (Pune, India)
+  - Delivered site synchronisation framework for Bayer's global website factory, achieving 99.5% reliability across 300+ environments
+- **Senior Consultant / Tech Lead** (Apr 2014 - Sep 2018) - **Capgemini** (Pune, India)
+  - Led Mina Sidor platform rebuild (GDPR-compliant, stateless architecture) for Sergel; delivered for Royal Mail, Boehringer Ingelheim, Pfizer
+- 5 earlier roles (2005-2014) in software engineering / tech lead capacities - see full profile for details
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** PHP, Drupal, Symfony, AWS, CI/CD (GitLab, Bitbucket, GitHub Actions), Solution Architecture
+- **Secondary:** JavaScript/TypeScript, Vue.js/Nuxt.js/Next.js/React.js (foundational), Go (learning), Python (basic), Terraform, Docker
+- **Domain:** Enterprise digital platform architecture in regulated environments (pharma, healthcare, logistics, publishing), GDPR-compliant architecture
+- **Software:** Acquia Cloud, Pantheon, Digital Ocean, MySQL, MS SQL Server, Claude Code (AI-assisted / spec-driven development)
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+<!-- Full list with verified dates in 01-candidate-profile.md -->
+- **AWS Certified Cloud Practitioner** - completed Apr 2026
+- **AWS Certified Solutions Architect Associate** - in progress
+- **Oracle Cloud Infrastructure 2025 Generative AI Professional** - Oct 2025
+- **Acquia Triple Certified - Drupal 9 & Drupal 8**, plus 8 additional Acquia specialist credentials (2018-2022)
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- Sharique Ahmed Farooqui. "openSUSE Leap 42.1: The Linux Distro You Will Love."
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- OKR of the Quarter - Acquia (Drupal content-automation initiative, 70% manual-effort reduction)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- No formal PI/DISC/Myers-Briggs assessment on file yet. Inferred signals below - see 02-behavioral-profile.md for full detail and sourcing. -->
+- **Systematic & reliable** - *(inferred from employer reference letter)* work style consistently characterised by planning and structure; resilient under high workload
+- **AI-forward engineering practice** - embraces AI-assisted development (Claude Code) as a force multiplier while maintaining architectural quality and standards
+- **Strengths:** Team building from scratch, regulated-environment architecture, translating business challenges into technical solutions
+- **Growth areas:** German language proficiency (B1, working toward B2)
+- **Thrives in:** Environments combining technical depth with people leadership; mission-driven or high-impact work
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Team leadership and mentoring
+- AI-assisted / modern engineering practice (spec-driven development, as in the Mansooba project)
+- Mission-driven, high-impact work
+- Technical architecture and scale problems
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **Consulting / Digital Transformation:** EY, NTT Data, Capgemini-style firms
+- **Enterprise / Regulated industries:** Pharma, healthcare, logistics (Bayer, Takeda, Pfizer, Boehringer Ingelheim, Royal Mail Group as prior clients)
+- **Mission-driven organisations:** e.g. Wikimedia Deutschland
+- **Manufacturing / tech-forward industry:** e.g. Tesla (exploring a Go/backend engineering pivot)
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- None hard-set; open to Berlin/remote, wider EU relocation, or the Arab Gulf region for the right opportunity
+- Salary expectations are flexible / case-by-case rather than a fixed baseline
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

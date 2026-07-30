@@ -129,6 +129,13 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 - If you know the team: "Dear [Company] hiring team,"
 - Generic: "Dear [Company]," (avoid "To whom it may concern")
 
+### Opening Style: Mission-Driven / Nonprofit Organisations
+*[Used for: Wikimedia Deutschland - Interim Engineering Manager]*
+For mission-driven or nonprofit organisations, a thematic/narrative hook opening can work better than the standard "I am writing to express my interest" formula - lead with why the work matters, then connect your background to it:
+> "Every day, billions of people open a Wikipedia article to understand the world around them. And increasingly, when they ask an AI assistant a factual question, the answer is grounded, directly or indirectly, in Wikidata... I believe the work your Wikidata for Wikimedia Projects team does is more critical now than at any point since 2012, and it is precisely this significance that drew me to apply..."
+
+This is structurally distinct from the standard credentials-first opening used for corporate/consulting roles (see 03-writing-style.md "Patterns Observed") - use judgement on which fits the target organisation's culture.
+
 ### Length - Hard 1-Page Limit
 - Target: 1 page including signature block
 - Maximum: **never exceed 1 page**
