@@ -1,6 +1,6 @@
 %% CV Template: sharique
-%% Recreated in LaTeX from an HTML/CSS resume export (photo header, blue
-%% accent bar, two-column skills/certs grid, highlighted award callout).
+%% Recreated in LaTeX from an HTML/CSS resume export (no photo, blue accent
+%% bar, two-column skills/certs grid, language grid, optional award callout).
 %% See TEMPLATE.md for style rules, font notes, and known pitfalls.
 %%
 %% Compile with: pdflatex -interaction=nonstopmode template.tex
@@ -64,6 +64,46 @@
 % as part of #1 to switch to gray mid-line, matching the source design.
 \newcommand{\entrysub}[1]{{\fontsize{9}{11}\selectfont\bfseries\color{accent}#1}\par\vspace{3pt}}
 
+% Two-column grid row: bold label (line 1) + gray detail (line 2), top-aligned,
+% independent minipages per row. Deliberately NOT a single shared tabularx row -
+% when one cell's text wraps to more lines than its neighbor, a shared table row
+% staggers every row that follows it. Two independent minipages per row-pair
+% avoids that coupling entirely (used for Skills).
+\newcommand{\skillrow}[4]{\noindent
+  \begin{minipage}[t]{0.48\linewidth}
+    {\fontsize{9}{11}\selectfont\bfseries #1}\par
+    {\fontsize{8.5}{11}\selectfont\color{graytext}#2}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\linewidth}
+    {\fontsize{9}{11}\selectfont\bfseries #3}\par
+    {\fontsize{8.5}{11}\selectfont\color{graytext}#4}
+  \end{minipage}\par\vspace{8pt}}
+
+% Same row-pair pattern as \skillrow, regular (non-bold) weight for the label -
+% used for Certifications. Pass "\href{URL}{Name}" as a label argument for a
+% linked cert (renders in accent blue via the colorlinks/urlcolor setup below -
+% do NOT wrap it in \color{darktext}, that defeats the link color); pass plain
+% text for an unlinked one (e.g. "in progress" - inherits darktext).
+\newcommand{\certrow}[4]{\noindent
+  \begin{minipage}[t]{0.48\linewidth}
+    {\fontsize{9}{11}\selectfont #1}\par
+    {\fontsize{8.5}{10}\selectfont\color{graytext}#2}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\linewidth}
+    {\fontsize{9}{11}\selectfont #3}\par
+    {\fontsize{8.5}{10}\selectfont\color{graytext}#4}
+  \end{minipage}\par\vspace{6pt}}
+
+% Single language column: name (bold) over proficiency level (gray). Natural
+% width (sized to its own content, not a fixed fraction) - matches the source
+% CSS's flexbox, which does the same. Lay out with \hspace{18pt} between calls;
+% see "Known pitfalls" in TEMPLATE.md if the row ever overflows \linewidth.
+\newcommand{\langcol}[2]{%
+  \begin{tabular}[t]{@{}l@{}}
+    {\fontsize{9}{11}\selectfont\bfseries #1}\\
+    {\fontsize{8.5}{10}\selectfont\color{graytext}#2}
+  \end{tabular}}
+
 % Highlighted callout box (e.g. "OKR of the Quarter") - light blue background,
 % blue left bar. Built with plain colortbl (no tcolorbox dependency).
 \newcommand{\awardbox}[2]{%
@@ -81,27 +121,18 @@
 % ============================================================
 %     HEADER
 % ============================================================
+% No photo in the source design - full linewidth. If a specific application
+% wants one, see "Adding a photo" in TEMPLATE.md's Known pitfalls.
 \noindent
-\begin{minipage}[t]{0.80\linewidth}
-  {\fontsize{22}{24}\selectfont\bfseries [YOUR_NAME]}\par
-  \vspace{2pt}
-  {\fontsize{11}{13}\selectfont\color{accent}[YOUR_HEADLINE]}\par
-  \vspace{4pt}
-  {\fontsize{8.5}{11}\selectfont\color{graytext}%
-   [YOUR_PHONE] \quad [YOUR_EMAIL] \quad [YOUR_LOCATION] \quad
-   \href{[YOUR_LINKEDIN_URL]}{\color{accent}[YOUR_LINKEDIN_DISPLAY]} \quad
-   \href{[YOUR_GITHUB_URL]}{\color{accent}[YOUR_GITHUB_DISPLAY]} \quad
-   [YOUR_WORK_AUTH_NOTE]}
-\end{minipage}%
-\hfill
-\begin{minipage}[t]{0.15\linewidth}
-  \raggedleft
-  \begin{tikzpicture}
-    \clip[rounded corners=1.5pt] (0,0) rectangle (2.1cm,2.1cm);
-    \node[anchor=south west,inner sep=0] at (0,0)
-      {\includegraphics[width=2.1cm,height=2.1cm]{[YOUR_PHOTO]}};
-  \end{tikzpicture}
-\end{minipage}
+{\fontsize{22}{24}\selectfont\bfseries [YOUR_NAME]}\par
+\vspace{2pt}
+{\fontsize{11}{13}\selectfont\color{accent}[YOUR_HEADLINE]}\par
+\vspace{4pt}
+{\fontsize{8.5}{11}\selectfont\color{graytext}%
+ [YOUR_PHONE] \quad [YOUR_EMAIL] \quad [YOUR_LOCATION] \quad
+ \href{[YOUR_LINKEDIN_URL]}{\color{accent}[YOUR_LINKEDIN_DISPLAY]} \quad
+ \href{[YOUR_GITHUB_URL]}{\color{accent}[YOUR_GITHUB_DISPLAY]}\\
+ [YOUR_WORK_AUTH_NOTE]}
 
 \vspace{6pt}
 \noindent{\color{accent}\rule{\linewidth}{1.2pt}}
@@ -117,21 +148,8 @@
 %     SKILLS
 % ============================================================
 \section{\textls[150]{SKILLS}}
-\begin{tabularx}{\linewidth}{@{}X X@{}}
-{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_1]}\par
-{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_1]}
-&
-{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_2]}\par
-{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_2]}
-\\[8pt]
-{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_3]}\par
-{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_3]}
-&
-{\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_4]}\par
-{\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_4]}
-\end{tabularx}
-
-\vspace{8pt}
+\skillrow{[SKILL_CATEGORY_1]}{[SKILL_ITEMS_1]}{[SKILL_CATEGORY_2]}{[SKILL_ITEMS_2]}
+\skillrow{[SKILL_CATEGORY_3]}{[SKILL_ITEMS_3]}{[SKILL_CATEGORY_4]}{[SKILL_ITEMS_4]}
 {\fontsize{9}{11}\selectfont\bfseries [SKILL_CATEGORY_FULLWIDTH]}\par
 {\fontsize{8.5}{11}\selectfont\color{graytext}[SKILL_ITEMS_FULLWIDTH]}
 
@@ -166,13 +184,8 @@
 %     CERTIFICATIONS
 % ============================================================
 \section{\textls[150]{CERTIFICATIONS}}
-\begin{tabularx}{\linewidth}{@{}X X@{}}
-{\fontsize{9}{11}\selectfont \href{[CERT_URL_1]}{\color{darktext}[CERT_NAME_1]}}\par
-{\fontsize{8.5}{10}\selectfont\color{graytext}[CERT_DATE_1]}
-&
-{\fontsize{9}{11}\selectfont [CERT_NAME_2]}\par
-{\fontsize{8.5}{10}\selectfont\color{graytext}[CERT_DATE_2]}
-\end{tabularx}
+\certrow{\href{[CERT_URL_1]}{[CERT_NAME_1]}}{[CERT_DATE_1]}{\href{[CERT_URL_2]}{[CERT_NAME_2]}}{[CERT_DATE_2]}
+\certrow{\href{[CERT_URL_3]}{[CERT_NAME_3]}}{[CERT_DATE_3]}{[CERT_NAME_4]}{[CERT_DATE_4]}
 
 % ============================================================
 %     EDUCATION
@@ -192,7 +205,10 @@
 %     PROJECTS
 % ============================================================
 \section{\textls[150]{PROJECTS}}
-\entryrow{[PROJECT_NAME]}{[PROJECT_START]~--~[PROJECT_END]}
+% Wrap the title in \href when a public repo/demo URL exists - it renders in
+% accent blue automatically via the colorlinks setup above. Drop the \href
+% (plain title text) if there's nothing to link to.
+\entryrow{\href{[PROJECT_URL]}{[PROJECT_NAME]}}{[PROJECT_START]~--~[PROJECT_END]}
 \begin{compactitem}
   \item [BULLET]
   \item [BULLET]
@@ -211,8 +227,11 @@
 %     LANGUAGES
 % ============================================================
 \section{\textls[150]{LANGUAGES}}
-{\fontsize{9}{11}\selectfont\bfseries [LANGUAGE_1]}\ {\fontsize{8.5}{10}\selectfont\color{graytext}([LEVEL_1])}\qquad
-{\fontsize{9}{11}\selectfont\bfseries [LANGUAGE_2]}\ {\fontsize{8.5}{10}\selectfont\color{graytext}([LEVEL_2])}\qquad
-{\fontsize{9}{11}\selectfont\bfseries [LANGUAGE_3]}\ {\fontsize{8.5}{10}\selectfont\color{graytext}([LEVEL_3])}
+% Grid, not inline prose: name bold on its own line, level gray beneath, one
+% natural-width column per language, spaced with \hspace.
+\noindent\langcol{[LANGUAGE_1]}{[LEVEL_1]}\hspace{18pt}
+\langcol{[LANGUAGE_2]}{[LEVEL_2]}\hspace{18pt}
+\langcol{[LANGUAGE_3]}{[LEVEL_3]}\hspace{18pt}
+\langcol{[LANGUAGE_4]}{[LEVEL_4]}
 
 \end{document}

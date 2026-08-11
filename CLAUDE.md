@@ -15,13 +15,27 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 ### Identity
 - **Name:** Sharique Ahmed Farooqui
 - **Location:** Berlin, Germany (open to relocation within the EU and, for the right opportunity, the Arab Gulf region)
-- **Languages:** English (Professional/Fluent), German (B1, B2 course in progress), Hindi (Native), Urdu (Native), Turkish (Elementary)
+- **Languages:**
+  | Language | Level |
+  |----------|-------|
+  | English | Professional/Fluent |
+  | German | B1 complete, B2 course in progress |
+  | Hindi | Native |
+  | Urdu | Native |
+  | Turkish | Elementary |
+  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
+  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
+  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
+  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
+  04-job-evaluation.md's Language Gate. -->
+- **CV language:** English
+
 - **Status:** EU Blue Card holder, unrestricted work authorisation across the EU
 - **LinkedIn headline:** "Solutions Architect | Cloud & Platform Modernization | Enterprise Software | AWS | 20+ Years Building Scalable Digital Platforms"
 
 ### Education
 - **Bachelor of Engineering, Computer Science & Engineering** (1998-2004) - Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (Mandsaur Institute of Technology)
-- **Cloud Engineering, Training Programme** (Nov 2025 - May 2026) - Masterschool, Berlin
+- **Cloud Engineering, Training Programme** (Nov 2025 - May 2026, completed) - Masterschool, Berlin
   - Topics: AWS (EC2, S3, IAM, VPC, RDS), Terraform, Docker, GitHub Actions CI/CD
 
 ### Professional Experience
@@ -30,7 +44,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - Architected unified platform for Takeda enabling standardised deployment of 30+ sites from a single codebase
   - Led platform rebuild achieving 5x application performance improvement
 - **Senior Drupal Developer** (Oct 2018 - Feb 2022) - **Acquia Inc.** (Pune, India)
-  - Delivered site synchronisation framework for Bayer's global website factory, achieving 99.5% reliability across 300+ environments
+  - Operated enterprise workloads on Acquia Cloud, maintaining 99.5% reliability across 300+ environments for Bayer's global website factory; delivered the underlying site synchronisation framework
 - **Senior Consultant / Tech Lead** (Apr 2014 - Sep 2018) - **Capgemini** (Pune, India)
   - Led Mina Sidor platform rebuild (GDPR-compliant, stateless architecture) for Sergel; delivered for Royal Mail, Boehringer Ingelheim, Pfizer
 - 5 earlier roles (2005-2014) in software engineering / tech lead capacities - see full profile for details
@@ -75,6 +89,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Manufacturing / tech-forward industry:** e.g. Tesla (exploring a Go/backend engineering pivot)
 
 ### Deal-breakers
+<!-- Hard constraints on job search. Language requirements are handled separately and
+automatically from your Languages table above - don't duplicate them here. -->
 - None hard-set; open to Berlin/remote, wider EU relocation, or the Arab Gulf region for the right opportunity
 - Salary expectations are flexible / case-by-case rather than a fixed baseline
 

@@ -10,6 +10,8 @@ The `site:` query templates in this file are the **WebSearch fallback** — for 
 
 **Xing was initially skipped, then built with a headless browser on a follow-up `/add-portal` run.** Its `robots.txt` actually *allows* `/jobs/search` for Claude-User specifically (an explicit AI-agent exception), but the page is a pure client-rendered SPA with no data in the raw HTML. `xing-search` renders it via a headless browser (system Chrome, `playwright-core`) rather than calling the GraphQL/API endpoints, which remain disallowed for every agent. Expect a few seconds of latency per call - it is not zero-dependency like the other portal CLIs.
 
+**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+
 ## Search Sites
 
 Primary:
@@ -28,7 +30,7 @@ Solution Architect / Engineering Manager / Technical Consultant background: 20+ 
 
 ## Query Categories
 
-Queries are grouped by priority. Each query should be combined with location terms where the site supports it.
+Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
 
 ### Priority 1: Solution Architect / Digital Transformation
 
@@ -89,6 +91,10 @@ When evaluating results, use these tiers:
 - **Acceptable:** DACH region (Germany, Austria, Switzerland); remote-friendly roles based in Germany
 - **Borderline:** Wider EU with relocation support (e.g. Luxembourg, Netherlands) — already demonstrated via the EY Luxembourg application
 - **Too far / case-by-case:** Arab Gulf region (UAE, Saudi Arabia, Qatar, etc.) — open to this only "for the right opportunity," not a general search target; weight lower than EU results unless the role is a strong fit
+
+## Language Filter
+
+Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
 
 ## Date Filter
 

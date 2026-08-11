@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.0
+framework_version: 1.1.1
 ---
 
 # Candidate Profile
@@ -12,16 +12,29 @@ framework_version: 1.0.0
 - **LinkedIn:** linkedin.com/in/sharique
 - **GitHub:** github.com/sharique
 - **Portfolio:** drupal.org/u/sharique, openahmed.com
-- **Languages:** English (Professional/Fluent), German (B1 complete, B2 course in progress), Hindi (Native), Urdu (Native), Turkish (Elementary)
 - **Status:** EU Blue Card holder, unrestricted work authorisation across the EU
 - **Constraints:** Berlin-based; open to relocation (has applied to roles outside Germany, e.g. Luxembourg)
+
+### Languages
+<!-- Every language you can work in professionally, with your honest level. Used by the
+Language Gate in 04-job-evaluation.md and by job-scraper/search-queries.md's query-language
+generation. Omit any language you don't actually work in - an undeclared language is treated as
+a hard no, not a gap to smooth over. -->
+
+| Language | Level | Notes |
+|----------|-------|-------|
+| English | Professional/Fluent | |
+| German | B1 complete, B2 course in progress | |
+| Hindi | Native | |
+| Urdu | Native | |
+| Turkish | Elementary | |
 
 ## Education
 
 | Degree | Period | Institution | Key Topics |
 |--------|--------|-------------|------------|
 | Bachelor of Engineering, Computer Science & Engineering | 1998-2004 | Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (Mandsaur Institute of Technology, Mandsaur, M.P.) — Second Division | Core CS fundamentals |
-| Cloud Engineering, Training Programme | Nov 2025 - May 2026 | Masterschool, Berlin | AWS (EC2, S3, IAM, VPC, RDS), Terraform, Docker, GitHub Actions CI/CD; Python course with hands-on application development |
+| Cloud Engineering, Training Programme | Nov 2025 - May 2026, completed | Masterschool, Berlin | AWS (EC2, S3, IAM, VPC, RDS), Terraform, Docker, GitHub Actions CI/CD; Python course with hands-on application development |
 | German Intensive Course (A2-B1) | Jan 2025 - Feb 2026 | VHS Berlin / Servicezentrum der Berliner Volkshochschulen | German language |
 
 ## Professional Experience
